@@ -441,5 +441,10 @@ BOARD_KERNEL_CMDLINE += log_buf_len=1024K
 # Protected VM firmware
 BOARD_PVMFWIMAGE_PARTITION_SIZE := 0x00100000
 
+# VINTF
+DEVICE_MANIFEST_FILE += \
+    device/google/gs201-common/android.hardware.security.rkp-service.citadel.xml \
+    device/google/gs201-common/manifest_radio_ds.xml
+
 # pick up library for cleaning digital car keys on factory reset
 -include vendor/google_devices/gs-common/proprietary/BoardConfigVendor.mk
