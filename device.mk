@@ -289,14 +289,14 @@ DEVICE_MANIFEST_FILE += \
 	device/google/gs201/manifest_media_aosp.xml
 
 PRODUCT_COPY_FILES += \
-	device/google/gs201/media_codecs_aosp_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml
+	device/google/gs201-common/configs/media/media_codecs_aosp_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml
 else
 DEVICE_MANIFEST_FILE += \
 	device/google/gs201/manifest_media.xml
 
 PRODUCT_COPY_FILES += \
-	device/google/gs201/media_codecs_bo_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml \
-	device/google/gs201/media_codecs_aosp_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_aosp_c2.xml
+	device/google/gs201-common/configs/media/media_codecs_bo_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml \
+	device/google/gs201-common/configs/media/media_codecs_aosp_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_aosp_c2.xml
 endif
 
 DEVICE_MATRIX_FILE := \
@@ -744,7 +744,7 @@ $(call soong_config_set,bigo,soc,gs201)
 PRODUCT_SOONG_NAMESPACES += vendor/samsung_slsi/codec2
 
 PRODUCT_COPY_FILES += \
-	device/google/gs201/media_codecs_performance_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_c2.xml \
+	device/google/gs201-common/configs/media/media_codecs_performance_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_c2.xml \
 
 PRODUCT_PACKAGES += \
 	samsung.hardware.media.c2@1.0-service \
@@ -777,8 +777,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # 2. OpenMAX IL
 PRODUCT_COPY_FILES += \
-	device/google/gs201/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
-	device/google/gs201/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml
+	device/google/gs201-common/configs/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
+	device/google/gs201-common/configs/media/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml
 ####################################
 
 # Telephony
