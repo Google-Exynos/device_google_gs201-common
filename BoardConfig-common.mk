@@ -67,7 +67,7 @@ endif
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
 BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
 BOARD_MOVE_GSI_AVB_KEYS_TO_VENDOR_BOOT := true
-TARGET_RECOVERY_WIPE := device/google/gs201/conf/recovery.wipe
+TARGET_RECOVERY_WIPE := device/google/gs201-common/conf/recovery.wipe
 
 # This is the fstab file that will be included in the recovery image.  Note that
 # recovery doesn't care about the encryption settings, so it doesn't matter
@@ -115,7 +115,7 @@ endif
 BOARD_EMULATOR_COMMON_MODULES := liblight
 
 OVERRIDE_RS_DRIVER := libRSDriverArm.so
-BOARD_EGL_CFG := device/google/gs201/conf/egl.cfg
+BOARD_EGL_CFG := device/google/gs201-common/conf/egl.cfg
 #BOARD_USES_HGL := true
 USE_OPENGL_RENDERER := true
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
@@ -333,7 +333,7 @@ BOARD_USES_METADATA_PARTITION := true
 #BOARD_USES_FIMGAPI_V5X := true
 
 # SECCOMP Policy
-BOARD_SECCOMP_POLICY = device/google/gs201/seccomp_policy
+BOARD_SECCOMP_POLICY = device/google/gs201-common/seccomp_policy
 
 #CURL
 BOARD_USES_CURL := true
@@ -430,7 +430,7 @@ endif
 # Using BUILD_COPY_HEADERS
 BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
 
-include device/google/gs201/sepolicy/gs201-sepolicy.mk
+include device/google/gs201-common/sepolicy/gs201-sepolicy.mk
 
 # Battery options
 BOARD_KERNEL_CMDLINE += at24.write_timeout=100
